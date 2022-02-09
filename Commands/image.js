@@ -8,8 +8,7 @@ const google = new Scraper({
 
 module.exports = {
     callback:(message, ...args) => {
-        // async execute(client, message, args)
-        // {
+
             const image_query = args.join(' ');
             if (!image_query) {
                 message.reply('Please enter an image name')
@@ -21,7 +20,5 @@ module.exports = {
                 .catch((error) => {
                     message.reply('Please try again.');
                 })
-
-
     },
 }

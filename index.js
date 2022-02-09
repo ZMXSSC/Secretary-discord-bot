@@ -86,8 +86,8 @@ client.on("messageCreate", (message) => {
 
     if (message.author.bot) return
 
-    if (message.content.toLowerCase().startsWith('s')){
-        message.channel.send(message.content.replace('s', ''))
+    if (message.content.toLowerCase().startsWith('+ ')){
+        message.channel.send(message.content.replace('+ ', ''))
         message.delete()
     }
 })
